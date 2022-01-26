@@ -54,3 +54,32 @@ attrs를 사용해서 컴포넌트에 미리 속성을 전달할 수 있다.
 const Input = styled.input. **attrs({ required: true })**
 ```
 이러면 추후에 Input을 재사용할 때 직접 required를 해주지 않아도 된다!
+
+## animation
+
+우선 keyframes를 불러온다.
+
+```
+import {keyframes} from "styled-components";
+```
+
+```
+const rotationAnimation = keyframes`
+  0% {
+    transform:rotate(0deg);
+    border-radius:0px;
+  }
+  50% {
+    border-radius:100px;
+  }
+  100%{
+    transform:rotate(360deg);
+    border-radius:0px;
+  }
+`;
+```
+간단하게 빙글빙글 돌아가는 도형 완성!
+
+이렇게 애니메이션을 스타일을 지정해준 뒤에 해당 스타일을 원하는 컴포넌트의 styled안에서 **animation: ${rotationAnimation}** 를 설정하면 된다.
+
+#### (&: hover) 을 통해 간단하게 hover을 입혀줄 수 있다. 
