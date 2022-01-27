@@ -7,7 +7,7 @@
 - 초기에 타입스크립트를 지정하지 않고 중간에 설치할 경우 터미널에
 **npm i --save typescript @types/node @types/react @types/react-dom @types/jest** 를 설치해준다.
 
-### 코드 실행 전에 오류를 인식하는 것이 Proptypes와의 차이점이당.
+#### 코드 실행 전에 오류를 인식하는 것이 Proptypes와의 차이점이당.
 
 ## styled-components 
 
@@ -39,4 +39,3 @@ bgColor: string | undefined
 ```
 - | undefined 사용
 
-### 마찬가지로 useState에서도 **useState<number | string>** 이런식으로 타입을 지정해주면 된다.
