@@ -18,5 +18,6 @@
 ```
 
 - event를 쓸 때도 마찬가지로 타입을 지정해줘야한다. : **React.FormEvent** 사용.
-- <HTMLInputElement>를 붙여서 onChange 함수가 HTML의 input 항목을 바꾼다는 것을 타입스크립트에게 알려준다.
+ 
+- < HTMLInputElement >를 붙여서 onChange 함수가 HTML의 input 항목을 바꾼다는 것을 타입스크립트에게 알려준다.
 - target이 아닌 currentTarget을 사용한다. (기능은 같당)
