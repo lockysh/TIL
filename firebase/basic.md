@@ -40,39 +40,3 @@ export const auth = getAuth(app);
 ```
 import { auth } from '../firebase';
 ```
-
-## Authentication
-
-firebase를 이용하면 간편하게 signup/signin을 구현할 수 있다.
-
-```
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../firebase';
-```
-
-- signup
-
-```
-  const handleSignUp = async (event: any) => {
-    event.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, userEmail, userPw);
-      navigate('/');
-    } catch (error: any) {
-      alert(error.message);
-    }
-```
-
-- signin
-
-```
-  const handleSignIn = async (event: any) => {
-    event.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, userEmail, userPw);
-      navigate('/');
-    } catch (error: any) {
-      alert(error.message);
-    }
-  };
-```
