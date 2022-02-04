@@ -13,6 +13,7 @@ const {
     register,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm<IForm>({
     defaultValues: {
       email: '@naver.com',
