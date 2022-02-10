@@ -27,3 +27,29 @@ test()
 ```
 
 함수를 호출하고 실행되는 도중 <result>함수가 중단되었다가 Promise가 처리되면 객채의 결과 값이 할당되며 실행이 재개된다.
+
+### 에러 핸들링
+
+await가 던진 에러는 try..catch를 사용해 잡을 수 있다.
+
+```
+async function test(){
+  try{
+    const response = await fetch('url')
+    const user = await response.json()
+  }
+  catch(error)
+}
+
+test();
+```
+
+혹은
+
+```
+async function test(){
+	const response = await fetch('url')
+}
+//foo()는 거부 상태의 Promise가 된다.
+tset.catch(alert);
+```
