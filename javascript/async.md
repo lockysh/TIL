@@ -50,6 +50,6 @@ test();
 async function test(){
 	const response = await fetch('url')
 }
-//foo()는 거부 상태의 Promise가 된다.
-tset.catch(alert);
+
+test.catch(alert);
 ```

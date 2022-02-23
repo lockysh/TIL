@@ -3,6 +3,8 @@
 ## surver side rendering
 
 - JS가 전부 다운로드 되지 않아도, 일단 화면은 보이지만 유저가 사용은 할 수 없다.
+  -> 먼저 서버에서 응답 값을 만들어서 내려주고, 그 후에 static file을 내려주기 때문이다.
+
 - JS가 전부 다운로드 되어 리액트가 정상 실행 될 후 유저가 사용 가능하다.
 
 ## client side rendering
