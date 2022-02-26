@@ -9,6 +9,10 @@
 
 - reduce(()=> {}) : 배열 안 요소들에 reduce 안에 들어가는 함수가 적용됨.
 
+-splice() : 배열의 기존 요소를 삭제,교체, 추가할 수 있다.(원본 배열 자체를 수정할 수 있음)
+
+-Math.min()/Math.max() :배열에서 사용하려면 ES6의 destruction 할당 사용. (Math.min(...Array))
+
 ### functions
 
 - "".repeat(x) : x만큼 ""안에 문자열 반복
