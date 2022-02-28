@@ -5,6 +5,7 @@
 ### Array
 
 - Array(n).fill(x) : 배열 안에 n개의 인자들을 x로 채움
+
 - Array(n).push(x) : 배열 뒤에 x추가
 
 - reduce(()=> {}) : 배열 안 요소들에 reduce 안에 들어가는 함수가 적용됨.
@@ -13,7 +14,20 @@
 
 -Math.min()/Math.max() :배열에서 사용하려면 ES6의 destruction 할당 사용. (Math.min(...Array))
 
-### functions
+### methods
 
 - "".repeat(x) : x만큼 ""안에 문자열 반복
-- string.substring(x) : 문자열의 x번째부터 끝까지 반환
+
+- string.substring(a,b) : 문자열의 a번째부터 b까지 반환
+
+- string.slice(a,b) : 문자열의 a부터 b까지 반환
+
+- split('') & split(' ') : 전자는 모든 요소를 다 나누고, 후자는 띄어쓰기를 기준으로 나눈다.
+
+-join('') & join(' ') : 전자는 공백없이 합쳐지고, 후자는 띄어쓰기 제외하고 합쳐진다.
+
+- sort((a,b) => b-a) : 내림차순으로 정렬
+
+- Math.sqrt() / Math.pow : 제곱근/ 제곱수
+
+- 문자열 정수로 바꾸는 법 : Number() , +, 1을 곱하거나 나누기.
