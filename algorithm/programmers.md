@@ -14,6 +14,8 @@
 
 -Math.min()/Math.max() :배열에서 사용하려면 ES6의 destruction 할당 사용. (Math.min(...Array))
 
+- filter(function) : function의 기준대로 배열 속 요소를 거를 수 있다.
+
 ### methods
 
 - "".repeat(x) : x만큼 ""안에 문자열 반복
@@ -27,7 +29,14 @@
 -join('') & join(' ') : 전자는 공백없이 합쳐지고, 후자는 띄어쓰기 제외하고 합쳐진다.
 
 - sort((a,b) => b-a) : 내림차순으로 정렬
+- sort().reverse() : 유니코드에 따라서 내림차순 정렬
 
 - Math.sqrt() / Math.pow : 제곱근/ 제곱수
 
 - 문자열 정수로 바꾸는 법 : Number() , +, 1을 곱하거나 나누기.
+
+- includes(x) : x를 포함하는지 확인할 수 있음
+
+- match() :
+
+- every() :
