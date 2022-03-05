@@ -16,6 +16,10 @@
 
 - filter(function) : function의 기준대로 배열 속 요소를 거를 수 있다.
 
+- every() : 배열의 각 요소에 대해서 테스트 함수의 값이 모두 true인지 확인. (하나라도 false면 false)
+
+- some() : 배열의 각 요소에 대해 테스트 함수의 반환 값이 하나라도 true가 있는지 확인.(하나라도 true면 true)
+
 ### methods
 
 - "".repeat(x) : x만큼 ""안에 문자열 반복
@@ -37,6 +41,4 @@
 
 - includes(x) : x를 포함하는지 확인할 수 있음
 
-- match() :
-
-- every() :
+- match() : 특정 텍스트 안에 찾고싶은 단어가 있는 경우 해당 텍스트가 문구에 포함되어 있는지 확인 가능.
