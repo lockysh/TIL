@@ -1,5 +1,4 @@
 # React navigation
-
 ### get started
 
 1. 터미널에 설치
@@ -60,5 +59,3 @@ onPress={() => navigation.navigate('Details')}
 
 - 뒤로 이동 : navigation.goBack()
 - 최상단으로 이동 navigation.popToTop()
-
-### Params
