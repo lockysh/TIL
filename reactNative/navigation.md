@@ -59,3 +59,5 @@ onPress={() => navigation.navigate('Details')}
 
 - 뒤로 이동 : navigation.goBack()
 - 최상단으로 이동 navigation.popToTop()
+
+### Params
