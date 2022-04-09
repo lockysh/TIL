@@ -1,4 +1,5 @@
 # Expo go
+https://docs.expo.dev/versions/latest/
 
 expo go를 이용하여 앱을 개발하면서 java나 xcode의 설치없이 테스트 해볼 수 있다.
 
