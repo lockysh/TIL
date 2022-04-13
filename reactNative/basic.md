@@ -7,6 +7,3 @@ https://reactnative.directory/
 
 React Navigation
 https://reactnavigation.org/
-
-Expo Doc
-https://docs.expo.dev/versions/latest/
