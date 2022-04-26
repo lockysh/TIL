@@ -102,3 +102,9 @@ render(
   </div>
 )
 ```
+
+### 화면 높이/ 넓이 구하기
+
+import { Dimensions} from 'react-native';
+
+const {height: SCREEN_HEIGHT} = Dimensions.get('window');
