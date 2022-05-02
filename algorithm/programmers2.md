@@ -10,4 +10,6 @@
 
 - a.charAt(0) : 빈 문자열을 만나면 빈 문자열을 반환한다. <=> a[0]은 빈 문자열을 만나면 undefined를 반환한다.
 
+- endsWith() / startsWith()
+
 ### new Map()
