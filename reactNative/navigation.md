@@ -112,3 +112,5 @@ function DetailsScreen({ route, navigation }) {
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
 ```
+
+### Nested navigation
