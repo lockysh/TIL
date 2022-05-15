@@ -38,6 +38,12 @@ const styles = StyleSheet.create({
 
 https://styled-components.com/
 
+리액트 네이티브에서 스타일 컴포넌트 사용하면 import 뒤에 native를 붙여줘야 정상작동한다.
+
+```
+import styled from 'styled-components/native';
+```
+
 ```
 const Button = styled.a`
   display: inline-block;
