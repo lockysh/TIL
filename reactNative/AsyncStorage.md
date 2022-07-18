@@ -1,5 +1,11 @@
 # AsyncStorage
-https://react-native-async-storage.github.io/async-storage/docs/usage/
+~~https://react-native-async-storage.github.io/async-storage/docs/usage/~~
+
+https://reactnative.directory/?search=storage
+
+현재 react native 공식 사이트에서 지원을 **중단**해서 community packages에서 다운받아서 써야한다.
+
+---
 
 웹에서 개발할 때 사용자의 정보를 저장해둘 수 있는 local storage 기능이 react native 에서는 AsyncStorage 이다.
 
@@ -20,6 +26,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 ### 값 저장하기
 
 - string 값 저장하기
+
+(promist 값을 저장, 사용하기 위해 async/ await 사용함)
 
 ```
 const storeData = async (value) => {

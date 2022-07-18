@@ -109,8 +109,58 @@ render(
 )
 ```
 
+### props로 값 전달 후 스타일 지정
+
+```
+// props로 전달할 값 지정
+
+const FollowButton = ({onPress, text, isFollow}) => {
+  return (
+    <FollowBtn onPress={onPress} isFollow={isFollow}>
+      <FollowText isFollow={isFollow}>{text}</FollowText>
+    </FollowBtn>
+  );
+};
+
+const FollowBtn = styled.TouchableOpacity`
+  ...
+  // 전달된 값을 통해 스타일 지정
+
+  border: ${props => (props.isFollow ? '#b7b4df' : 'white')};
+  background-color: ${props => (props.isFollow ? 'white' : '#b7b4df')};
+`;
+
+```
+
+- FollowBtn / FollowText 에서 공통적으로 isfollow라는 boolean 값을 전달받아서 팔로우 여부를 판단하여 값에 따라 다른 스타일 지정
+
 ### 화면 높이/ 넓이 구하기
 
+```
+// import
 import { Dimensions} from 'react-native';
 
-const {height: SCREEN_HEIGHT} = Dimensions.get('window');
+// 사용할 값 선언
+const {width} = Dimensions.get('window');
+
+// component props로 지정
+ <HashTagContainer width={width}>
+          {Object.keys(myGenres)
+            .filter(a => a !== ('matrix_seq', 'kakao_user_number'))
+            .map(tags => {
+              return (
+                <HashTagBtn>
+                  <SelectedTags isSelected={idx.includes(tags)}>
+                    {tags}
+                  </SelectedTags>
+                </HashTagBtn>
+              );
+            })}
+        </HashTagContainer>
+...
+
+// style 값 지정
+const HashTagContainer = styled.TouchableOpacity`
+  width: ${({width}) => width * 0.9};
+`;
+```

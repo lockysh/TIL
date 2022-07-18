@@ -1,5 +1,4 @@
 # SPA deploy
-
 특징
 
 1. 서버에 모든 요청을 하고 받아오는 형태가 아님.
@@ -17,6 +16,7 @@ serve -s build
 
 2. AWS S3에 배포
 3. node.js express
+   z
 
 ```
 npm i express

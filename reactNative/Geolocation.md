@@ -27,6 +27,10 @@ import Geolocation from '@react-native-community/geolocation';
 
 <해결책>
 
+https://reactnative.dev/docs/permissionsandroid
+
+작업을 수행하기 전에 권한 허용이 되어있는지 판단하는 전처리 작업이 필요함( PermissionsAndroid 사용)
+
 ```
 import {PermissionsAndroid} from 'react-native';
 
@@ -42,3 +46,11 @@ const granted = await PermissionsAndroid.request(
     }
   };
 ```
+
+PermissionsAndroid.RESULTS의 값은 3가지로 나뉜다.
+
+1. GRANTED: 'granted'
+2. DENIED: 'denied'
+3. NEVER_ASK_AGAIN: 'never_ask_again'
+
+따라서 현재 위치에 대한 권한을 허용했는지를 판단하고 해당 값이 **"granted"** 라면 지정된 작업을 시행하도록 코드 수정
