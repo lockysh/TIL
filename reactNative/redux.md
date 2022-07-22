@@ -36,3 +36,76 @@ import store from './src/store';
           </NavigationContainer>
         </Provider>
 ```
+
+4. action type 정의해주기
+
+```
+const types = {
+    SAVE_KAKAO_UID: 'SAVE_KAKAO_UID',
+...
+}
+
+exports.saveKakaoUidAction = parameter => {
+  return {
+    type: types.SAVE_KAKAO_UID,
+    payload: parameter,
+  };
+};
+```
+
+5. rootReducer/ 개별 reducer 정의해주기
+
+```
+// root Reducer
+
+const rootReducer = combineReducers({
+  kakaoUid: kakaoUidReducer,
+  ...
+});
+```
+
+```
+// kakaoUid reducer
+
+const initialState = {
+  kakaoUid: null,
+};
+
+const kakaoUidReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case types.SAVE_KAKAO_UID:
+      return {
+        ...state,
+        kakaoUid: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+```
+
+6. 사용하기
+
+- 값 저장하기
+
+```
+import {useDispatch} from 'react-redux';
+import actions from '../../actions/index';
+
+const function() => {
+    const dispatch = useDispatch();
+
+dispatch(actions.saveKakaoUidAction("저장할 값"));
+}
+```
+
+- 저장한 값 사용
+
+```
+import {useSelector} from 'react-redux';
+const function() => {
+  // kakaoUid 라는 값으로 컴포넌트 안에서 사용
+  const {kakaoUid} = useSelector(state => state.kakaoUid);
+}
+
+```
