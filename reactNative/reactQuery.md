@@ -112,3 +112,38 @@ onMutate: variables => {
     작업 수행 후 성공/ 실패 여부와 관계없이 실행되는 함수
   },
 ```
+
+## Infinite Queries
+
+- infinite scroll을 가능하게 해주는 기능으로 useQuery 대신에 useInfiniteQuery를 사용하면 된다.
+
+- useQuery에서 나온 데이터는 API에서 오는 데이터 그대로 전달하지만, useInfiniteQuery는 "pages" 라는 페이지가 포함된 api 응답을 담은 배열을 반환한다.
+- 따라서 데이터에 접근하기 위해서는 map을 사용하여 각 페이지의 결과값들에 접근해야 한다.
+
+- 이러면 데이터들이 [[배열], [배열], [배열]...] 처럼 중첩된 배열 형식으로 저장되므로 flat 메소드를 사용하여 배열안의 모든 값들을 배열 밖으로 꺼내주는 작업을 해야한다.
+
+ex)
+
+```
+data.pages.map(page => page.results).flat()
+
+```
+
+- getNextPageParam :
+  useInfiniteQuery의 prop으로 다음페이지의 값을 찾을 수 있게 실행되는 함수.
+  현재 페이지에 있는 데이터들이 다 보여지고 다음 페이지를 불러와야 할 때 현재 페이지 정보와 전체 페이지 값을 비교하여 데이터들을 불러오도록 구현하면 된다.
+  ex)
+
+  ```
+  (lastPage) => {
+    if(lastPage.page + 1 > lastPage.total_pages) {
+      return null
+    }
+    return lastPage.page + 1
+  }
+  ```
+
+- page parameter을 갖게되면 react Query 에서는 자동적으로 인식하여 pageParam을 fetcher 함수에 즉시 전달한다.
+  ({pageParam} => fetch 함수 ...)로 사용가능.
+
+- getNextPageParam을 통해 다음 페이지를 찾은 후에는 useInfiniteQuery에서 queryhasNextPage(boolean) 와 fetchNextPage(function)을 사용하여 infinity scroll을 구현할 수 있다.
